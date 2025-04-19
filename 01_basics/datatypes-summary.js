@@ -55,3 +55,37 @@ const myFunc = function() {
 
 console.log(myFunc)
 console.log(typeof myFunc)   //function object
+
+/*************************************** */
+
+/* There are 2 types of memory in Javascript. i.e stack memory or heap memory.
+Stack memory is used in all primitive types. In stack memory, you will get a copy. Change in one won't change another.
+Heap memory is used in all non-primitive or object types. In heap memory, you will get reference. So, change in one will reflect in another also.
+*/
+
+//Primitive datatypes (copy)
+let myName = "Bibek Basak"
+
+let myOrginalName = myName
+console.log(myOrginalName)  //Bibek Basak
+
+myOrginalName = "Github classes"
+console.log(myOrginalName)  //Github classes
+console.log(myName)  //Bibek Basak
+
+//Non-primitive datatypes (same reference)
+let user1 = {
+    email : "bibek@gmail.com",
+    upiId : "phonepe@ybl"
+}
+
+let user2 = user1
+
+console.log(user1)  //{ email: 'bibek@gmail.com', upiId: 'phonepe@ybl' }
+console.log(user2)  //{ email: 'bibek@gmail.com', upiId: 'phonepe@ybl' }
+
+user2.email = "bibek@yahoo.com"
+user2.upiId = "gpay@axl"
+
+console.log(user2)  //{ email: 'bibek@yahoo.com', upiId: 'gpay@axl' }
+console.log(user1)  //{ email: 'bibek@yahoo.com', upiId: 'gpay@axl' }
