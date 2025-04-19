@@ -73,3 +73,50 @@ NaN is given by JS when a value cannot be converted into number but forcefully w
 "33abc" -> NaN
 true -> 1   false -> 0
 */
+
+// ***** Operations *****
+
+let value = 3;
+let negValue = -value
+console.log(value)  //3
+console.log(negValue)  //-3
+console.log(2%3)  //2
+console.log(2**3)  //8
+
+let str1 = "Bibek"
+let str2 = "Basak"
+
+console.log(str1 + str2);  //BibekBasak
+console.log(str1 - str2);  //NaN
+console.log(str1 * str2);  //NaN
+console.log(str1 / str2);  //NaN
+console.log(str1 % str2);  //NaN
+
+console.log("1" + 2)   //12  concatenation
+console.log(1 + "2")   //12  concatenation
+console.log("1" + "2") //12  concatenation
+console.log("1" + 2 + 4)  //124
+console.log(4 + 4 + "4")  //84
+
+console.log(true)  //true
+console.log(+true)  //1
+//console.log(true+)  //error
+console.log(+"")  //0
+
+let num1, num2, num3
+num1 = num2 = num3 = 2 + 2
+
+let gameCounter = 100
+gameCounter++;
+console.log(gameCounter)   //101
+++gameCounter;
+console.log(gameCounter)   //102
+
+/*
+In JS, if a string is added to any number then it will concatenate (append at end) rather than adding.
+console.log("1" + 2 + 4)  //124
+
+But in reverse case, it will first add those number then append the string after the result.
+console.log(4 + 4 + "4")  //84
+
+*/
